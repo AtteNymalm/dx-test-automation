@@ -5,7 +5,7 @@ services:
 
 before_install:
 - docker build -t dx-tutorial-starter  .
-- docker run -v `pwd`/tests/:/usr/src/tests -v /dev/shm:/dev/shm dx-tutorial-starter
+- docker run -v `pwd`/test/:/usr/src/test -v /dev/shm:/dev/shm dx-tutorial-starter
 
 script:
 - bundle exec rake test
