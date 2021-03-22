@@ -1,4 +1,11 @@
 language: ruby
-rvm:
- - 2.2
- - jruby
+
+services:
+  - docker
+
+before_install:
+- docker build -t dx-tutorial-starter  .
+- docker run -p 5900:5900 -v `pwd`/tests/:/usr/src/tests -v /dev/shm:/dev/shm dx-tutorial-starter
+
+script:
+- bundle exec rake test
