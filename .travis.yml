@@ -7,4 +7,4 @@ before_install:
 - docker build -t dx-tutorial-starter  .
 
 script:
-- docker run -v `pwd`/test.robot/:/usr/src/test -v /dev/shm:/dev/shm dx-tutorial-starter
+- docker run -v `pwd`/test/:/usr/src/test -v /dev/shm:/dev/shm dx-tutorial-starter
