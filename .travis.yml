@@ -8,3 +8,4 @@ before_install:
 
 script:
 - docker run -v `pwd`/test/:/usr/src/test -v /dev/shm:/dev/shm dx-tutorial-starter
+
