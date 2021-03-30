@@ -26,7 +26,7 @@ Download starter from tutorial
     [Documentation]               Download the starter linked in tutorial and run it
 
     # Initialize variables and create a working directory
-    ${download_directory}         Join Path    ${TEST_DIR}    downloads_${now}
+    ${download_directory}         Join Path    ${TEST_DIR}
     Create Directory              ${download_directory}
 
     # Simulate user navigating and downloading from vaadin.com
