@@ -7,6 +7,5 @@ before_install:
 - docker build -t test  .
 
 script:
-- cd test
 - docker run -v `pwd`/test/:/usr/src/test test
 
