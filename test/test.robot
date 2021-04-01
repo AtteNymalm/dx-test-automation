@@ -33,7 +33,7 @@ Download starter from tutorial
     Start chrome browser          ${URL}     ${download_directory}
     #Close vaadin cookie dialog
     Click First Element with Caption  Start a new app
-    Click Element with id  Button
+    Click First Link with Caption Download
     # Now we should be in tutorial page
     ${file}                       Wait Until Keyword Succeeds    1 min    2 sec    Wait for Download to complete    ${download_directory}
     
@@ -50,6 +50,11 @@ Click Element with id
     [Arguments]                   ${id}
     Click Element                 xpath=id:${id}
     Wait for Vaadin  
+
+Click First Link with Caption
+    [Arguments]                   ${caption}
+    Click Link                    (//a[contains(text(),"${caption}")][1])
+    Wait for Vaadin   
 
 Close vaadin cookie dialog
     [Documentation]               Closes vaadin website cookie dialog
