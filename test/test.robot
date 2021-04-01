@@ -32,8 +32,8 @@ Download starter from tutorial
     # Simulate user navigating and downloading from vaadin.com
     Start chrome browser          ${URL}     ${download_directory}
     #Close vaadin cookie dialog
-    Click First Element with Caption  Start a new app
-    Click Element with id download-button
+    Click First Element with Caption    Start a new app
+    Click Element with id   download-button
     # Now we should be in tutorial page
     ${file}                       Wait Until Keyword Succeeds    1 min    2 sec    Wait for Download to complete    ${download_directory}
     
